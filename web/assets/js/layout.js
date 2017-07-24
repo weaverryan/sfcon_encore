@@ -2,7 +2,6 @@
 
 (function(window, $) {
     $(document).ready(function() {
-        $('[data-toggle="tooltip"]').tooltip()
-        console.log($('[data-toggle="tooltip"]').length);
+        $('[data-toggle="tooltip"]').tooltip();
     });
 })(window, jQuery);
