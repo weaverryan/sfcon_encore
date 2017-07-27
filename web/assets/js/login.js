@@ -9,13 +9,13 @@
         });
 
         $('.js-login-field-username').on('keydown', function(e) {
-            const username = $(e.currentTarget).val();
+            const $usernameInput = $(e.currentTarget);
             // remove any existing warnings
             $('.login-long-username-warning').remove();
 
-            if (username.length >= 20) {
+            if ($usernameInput.val().length >= 20) {
                 const $warning = $('<div class="login-long-username-warning">This is a really long username - are you sure that is right?</div>');
-                $(this).before($warning);
+                $usernameInput.before($warning);
             }
         });
     });
