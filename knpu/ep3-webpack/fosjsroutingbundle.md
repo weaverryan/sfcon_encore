@@ -1,14 +1,84 @@
-# FOS JS RoutingBundle
+# FOSJsRoutingBundle
 
-Open up our base layout: appresourcesviewsbase.html.twig. If you scroll down to the bottom here, in a perfect world, we would only have one js file, layout.js, but we actually still have two script files here. These are bringing in a routing file from FOS JsRouting Bundle. I told you to ignore that until now. When you include this first script tag, it creates a global routing variable. This second script tab actually injects all of the routing data into that object. That allows us, for example, in replogapp.js, to say routing.generate and then use the name of our route. Routing is that global variable. This is the last case where we are actually including an external script tag and relying on global variables, so I want to fix this.
+Open up the base layout: `app/Resources/views/base.html.twig`. Scroll down to the
+bottom:
 
-Now, the kind of interesting thing about this JavaScript file is it doesn't come from a Node library, so it doesn't live inside of node-modules. It actually comes from a PHP library, and it lives way down here, in Vendor, Friends of Symphony, JsRouting Bundle, Resources, Public, js, router.js. That is actually the JavaScript file that we're currently including from the front end. Okay, so let's just try to require this instead. For example, I could say const routing = require, and the path is not going to be pretty here, but we can say ../../../vendor/friendsofsymphony/jsroutingbundle/resources/public/js/router. Phew.
+[[[ code('c1f423c15a') ]]]
 
-It's not very pretty, but it makes sense. Right? Let's try that out. Refresh, and oh, it did not like that. Check this out. Type error. Cannot read property navigator of undefined. It's coming from router.js, line eight. Huh. If you check out this file, I'll hold command and click into it, you can see it's a minified file. Basically, the way this file is created is using a Google closure library, which is an older library that generates JavaScript that is completely incompatible with a module system. Basically, the way this is written out, we cannot require it normally. This is something that I hope will be fixed in that library soon. I know there's a pull request open for it, but as of this recording, we cannot require this.
+In a perfect world, we would only have one JS file: `layout.js`. But, we still
+have two other script tags that are cramping my style. One loads `router.js`
+from FOSJsRoutingBundle, and the second populates that with the actual routes.
 
-That means we must continue to bring it in our base layout like this. Not ideal, but not that big of a deal. However, it does bother me a little bit that inside of my [inaudible 00:03:21] app.js, this is the one spot that where I am relying on global variables. I really want this file to be self contained. I want to have require statements that explicitly import anything that I'm using. Here is a little trick that I use, to make this not such a bad situation, and a situation where we could upgrade more easily in the future, once the library is updated. Inside of your components directory, create a new file called routing.js, and here, add module.exports = window.routing.
+Thanks to these, there is a *global* `Routing` variable, which we use in `RepLogApp.js`
+to generate URLs: `Routing.generate()` and then the route name:
 
-I had a little comment above this. Basically, we must remember to put the router.js script tag in our layout, but then, by creating this module, it at least gives us a module that we can require from the rest of our files, so that most of our code looks clean. If later, if the routing file suddenly is fixed, we only need to update this one spot to go require the new router file, and everything else in our code is still going to work just fine. In other words, in replogapp.js, I can now say const routing = require./routing. At least from the perspective of this file, I am actually requiring everything just the way I should.
+[[[ code('817f6be907') ]]]
 
-I want to refresh. It still works, so a pretty good solution for now. Ideally, in the future, that library will be updated, and then we can require the correct module from this file instead of using the window variable.
+This is the *last* place where we are using global variables... and I want to fix
+that!
 
+## Trying to require router.js
+
+The curious thing about the `router.js` file is that it lives in a PHP package. Instead
+of living in `node_modules`, it lives at
+`vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.js`. This is
+the exact file we're currently including in `base.html.twig`.
+
+Cool! So, let's just require it like normal! `const Routing = require()`, then...
+well, a very ugly path:
+`../../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.js`:
+
+[[[ code('73de26e8bd') ]]]
+
+Phew! Long, gross-looking... but it makes sense. Try it. Refresh!
+
+Uh oh... it did *not* like that:
+
+> Type error: Cannot read property navigator of undefined
+
+It's coming from `router.js`, line 8. Huh. If you look at this file, well, it's
+minified... so it's pretty confusing. This file is built using something called
+the Google Closure compiler... which basically means that it does *not* play nicely
+with `require()`. I *hope* this will be fixed in the library soon - there's a pull
+request open for it. But right now... well, there is no simple way to `require()` it.
+
+***TIP
+It *is* possible to `require()` the file... but it takes some work. See
+[bit.ly/fosjsroutingbundle-require][fosjsroutingbundle-require] if you're
+curious.
+***
+
+## Faking the Module
+
+So... yea... we *need* to keep these two script tags in our base layout for now.
+It's not ideal, but we'll survive.
+
+But! It *does* bother me that - inside `RepLogApp.js` - I am *relying* on this
+global variable. I *really* want this file to require *everything* it needs. So, I
+use a trick!
+
+Check this out: inside `Components`, create a new file called `Routing.js`. And inside
+that, just `module.exports = window.Routing`:
+
+[[[ code('40e6248111') ]]]
+
+I'll add a comment above this:
+
+[[[ code('d2b9e40ece') ]]]
+
+With this, yes, we *do* need to remember to put the `router.js` script tag in our
+layout. But now, we can *at least* correctly use require statements everywhere else.
+
+I mean, in `RepLogApp.js`, we can say `const Routing = require('./Routing')`:
+
+[[[ code('67e3e33180') ]]]
+
+From the perspective of *this* file, we're not relying on any global variables.
+And hey! When FOSJsRoutingBundle plays nicer in the future, we can easily update things.
+
+Refresh to make sure it works. Yes! Ok, let's move onto something completely different:
+requiring *partial* libraries... and then... replacing `require()` with the much trendier
+`import`.
+
+
+[fosjsroutingbundle-require]: http://bit.ly/fosjsroutingbundle-require
