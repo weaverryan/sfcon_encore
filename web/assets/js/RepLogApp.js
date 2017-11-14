@@ -194,9 +194,6 @@
         }
     }
 
-    /**
-     * A "private" object
-     */
     class Helper {
         constructor(repLogs) {
             this.repLogs = repLogs;
