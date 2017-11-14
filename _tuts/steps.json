@@ -66,6 +66,11 @@
             "description": null
         },
         {
+            "id": "webpack-enable-notifications",
+            "name": "Webpack: Enable notifications",
+            "description": null
+        },
+        {
             "id": "modules-refactor-replogapp-js",
             "name": "Modules: Refactor RepLogApp.js",
             "description": null
@@ -114,7 +119,52 @@
             "id": "bootstrap-autoprovidejquery",
             "name": "Bootstrap: autoProvidejQuery",
             "description": null
+        },
+        {
+            "id": "multipage-createdsharedentry",
+            "name": "Multipage: createdSharedEntry",
+            "description": null
+        },
+        {
+            "id": "css-require-login-css",
+            "name": "CSS: require login.css",
+            "description": null
+        },
+        {
+            "id": "css-require-main-css-with-img",
+            "name": "CSS: require main.css with img",
+            "description": null
+        },
+        {
+            "id": "organization-move-to-assets",
+            "name": "Organization: move to assets\/",
+            "description": null
+        },
+        {
+            "id": "organization-install-copywebpackplugin",
+            "name": "Organization: Install CopyWebpackPlugin",
+            "description": null
+        },
+        {
+            "id": "organization-copy-static-file",
+            "name": "Organization: Copy static file",
+            "description": null
+        },
+        {
+            "id": "css-bootstrap-fontawesome",
+            "name": "CSS: Bootstrap & FontAwesome",
+            "description": null
+        },
+        {
+            "id": "sass-try-to-use-scss",
+            "name": "Sass: Try to use .scss",
+            "description": null
+        },
+        {
+            "id": "sass-install-sass-deps",
+            "name": "Sass: Install sass deps",
+            "description": null
         }
     ],
-    "sha": "4da776908e7dbf2c158f1a3a938ffd150483fc40"
+    "sha": "f57778bf84f2091d423b7cc9707145fb640e0c04"
 }

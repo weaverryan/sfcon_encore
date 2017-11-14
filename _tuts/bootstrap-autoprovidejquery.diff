@@ -11,10 +11,10 @@ index 3628a4e3..e9d87b70 100644
  
  $(document).ready(function() {
 diff --git a/webpack.config.js b/webpack.config.js
-index 48865772..243fff56 100644
+index d7049d82..cda3d6fc 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
-@@ -20,7 +20,7 @@ Encore
+@@ -21,7 +21,7 @@ Encore
      //.enableSassLoader()
  
      // allow legacy applications to use $/jQuery as a global variable

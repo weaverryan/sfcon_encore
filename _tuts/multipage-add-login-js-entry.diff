@@ -55,10 +55,10 @@ index c07e0d7e..7daf09dc 100644
 -})(window, jQuery);
 +});
 diff --git a/webpack.config.js b/webpack.config.js
-index b4723e5e..f7aea6f4 100644
+index 7e26778e..55b1436c 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
-@@ -13,6 +13,7 @@ Encore
+@@ -14,6 +14,7 @@ Encore
  
      // will output as web/build/app.js
      .addEntry('rep_log', './web/assets/js/rep_log.js')

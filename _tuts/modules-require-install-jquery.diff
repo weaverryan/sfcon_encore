@@ -1,13 +1,13 @@
 diff --git a/package.json b/package.json
-index e6123098..1bdc1d70 100644
+index 193a8c96..b62a9911 100644
 --- a/package.json
 +++ b/package.json
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  {
    "devDependencies": {
--    "@symfony/webpack-encore": "^0.17.0"
-+    "@symfony/webpack-encore": "^0.17.0",
-+    "jquery": "^3.2.1"
+     "@symfony/webpack-encore": "^0.17.0",
++    "jquery": "^3.2.1",
+     "webpack-notifier": "^1.5.0"
    }
  }
 diff --git a/web/assets/js/rep_log.js b/web/assets/js/rep_log.js
@@ -20,10 +20,10 @@ index 37d3265c..ca79a286 100644
  
  $(document).ready(function() {
 diff --git a/yarn.lock b/yarn.lock
-index aff1af12..c44cab05 100644
+index 3ecffbeb..7af4203e 100644
 --- a/yarn.lock
 +++ b/yarn.lock
-@@ -2465,6 +2465,10 @@ isstream@~0.1.2:
+@@ -2501,6 +2501,10 @@ isstream@~0.1.2:
    version "0.1.2"
    resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
  

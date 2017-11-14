@@ -27,11 +27,11 @@ index 00000000..a42e5e7f
 +    var repLogApp = new RepLogApp($wrapper);
 +});
 diff --git a/webpack.config.js b/webpack.config.js
-index 2f3fc9f9..b4723e5e 100644
+index a3f6d11d..7e26778e 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
-@@ -12,7 +12,7 @@ Encore
-     .cleanupOutputBeforeBuild()
+@@ -13,7 +13,7 @@ Encore
+     .enableBuildNotifications()
  
      // will output as web/build/app.js
 -    .addEntry('rep_log', './web/assets/js/RepLogApp.js')
