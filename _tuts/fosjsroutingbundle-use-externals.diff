@@ -1,0 +1,29 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index d0080897..ef99c4dd 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -2,6 +2,7 @@
+ 
+ const Helper = require('./RepLogAppHelper');
+ const $ = require('jquery');
++const Routing = require('routing');
+ 
+ let HelperInstances = new WeakMap();
+ 
+diff --git a/webpack.config.js b/webpack.config.js
+index 35d426f7..39a427c7 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -37,5 +37,10 @@ Encore
+     ]))
+ ;
+ 
+-// export the final configuration
+-module.exports = Encore.getWebpackConfig();
++const config = Encore.getWebpackConfig();
++
++config.externals = {
++    routing: 'Routing'
++};
++
++module.exports = config;

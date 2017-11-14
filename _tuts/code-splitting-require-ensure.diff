@@ -1,0 +1,24 @@
+diff --git a/assets/js/login.js b/assets/js/login.js
+index 6ca40110..63c74cc7 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -5,7 +5,6 @@ import '../css/login.css';
+ import LoginDetails from './Components/LoginDetails';
+ import ReactDOM from 'react-dom';
+ import React from 'react';
+-import showLongUsernameError from './Components/show_long_username_error';
+ 
+ $(document).ready(function() {
+     const loginDetailsEl = document.getElementById('js-login-details');
+@@ -22,7 +21,10 @@ $(document).ready(function() {
+         $('.login-long-username-warning').remove();
+ 
+         if ($usernameInput.val().length >= 20) {
+-            showLongUsernameError($usernameInput);
++            require.ensure(['./Components/show_long_username_error'], (require) => {
++                const showLongUsernameError = require('./Components/show_long_username_error');
++                showLongUsernameError($usernameInput);
++            });
+         }
+     });
+ });

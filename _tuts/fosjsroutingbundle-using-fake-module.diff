@@ -1,0 +1,36 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index ef99c4dd..0ffa8cb2 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -2,7 +2,7 @@
+ 
+ const Helper = require('./RepLogAppHelper');
+ const $ = require('jquery');
+-const Routing = require('routing');
++const Routing = require('./Routing');
+ 
+ let HelperInstances = new WeakMap();
+ 
+diff --git a/assets/js/Components/Routing.js b/assets/js/Components/Routing.js
+new file mode 100644
+index 00000000..4f0abbfe
+--- /dev/null
++++ b/assets/js/Components/Routing.js
+@@ -0,0 +1 @@
++export default global.Routing;
+diff --git a/webpack.config.js b/webpack.config.js
+index 39a427c7..b0499987 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -39,8 +39,8 @@ Encore
+ 
+ const config = Encore.getWebpackConfig();
+ 
+-config.externals = {
+-    routing: 'Routing'
+-};
++// config.externals = {
++//     routing: 'Routing'
++// };
+ 
+ module.exports = config;

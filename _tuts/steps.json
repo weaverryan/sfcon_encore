@@ -234,7 +234,52 @@
             "id": "react-pass-data-via-data",
             "name": "React: Pass data via data-",
             "description": null
+        },
+        {
+            "id": "polyfill-add-polyfill",
+            "name": "Polyfill: Add polyfill",
+            "description": null
+        },
+        {
+            "id": "polyfill-only-promise",
+            "name": "Polyfill: Only promise",
+            "description": null
+        },
+        {
+            "id": "fosjsroutingbundle-use-externals",
+            "name": "FOSJsRoutingBundle: use externals",
+            "description": null
+        },
+        {
+            "id": "fosjsroutingbundle-using-fake-module",
+            "name": "FOSJsRoutingBundle: using fake module",
+            "description": null
+        },
+        {
+            "id": "code-splitting-refactor-to-module",
+            "name": "Code Splitting: Refactor to module",
+            "description": null
+        },
+        {
+            "id": "code-splitting-require-ensure",
+            "name": "Code Splitting: require.ensure",
+            "description": null
+        },
+        {
+            "id": "code-splitting-add-default",
+            "name": "Code Splitting: Add .default",
+            "description": null
+        },
+        {
+            "id": "code-splitting-using-import",
+            "name": "Code Splitting: Using import()",
+            "description": null
+        },
+        {
+            "id": "code-splitting-adding-babel-plugin",
+            "name": "Code Splitting: Adding babel plugin",
+            "description": null
         }
     ],
-    "sha": "c9da2741f0ed459486aea46bfc69058910f1081a"
+    "sha": "4b88631df02cd04692c43738d8e295de7f076381"
 }
