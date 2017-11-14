@@ -1,0 +1,19 @@
+diff --git a/conference.js b/conference.js
+index 175f009a..066365de 100644
+--- a/conference.js
++++ b/conference.js
+@@ -1 +1,3 @@
+-module.exports = 'SymfonyCon 2017';
++module.exports = {
++    conference: 'SymfonyCon 2017'
++};
+diff --git a/play.js b/play.js
+index fbe35dde..3556d22b 100644
+--- a/play.js
++++ b/play.js
+@@ -1,3 +1,3 @@
+-const conference = require('./conference');
++const data = require('./conference');
+ 
+-console.log(conference);
++console.log(data.conference);

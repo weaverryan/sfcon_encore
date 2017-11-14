@@ -1,0 +1,50 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "play-js-basic-code",
+            "name": "play.js: Basic code",
+            "description": null
+        },
+        {
+            "id": "play-js-using-const",
+            "name": "play.js: Using const",
+            "description": null
+        },
+        {
+            "id": "play-js-basic-require",
+            "name": "play.js: basic require",
+            "description": null
+        },
+        {
+            "id": "play-js-export-object",
+            "name": "play.js: export object",
+            "description": null
+        },
+        {
+            "id": "play-js-export-class",
+            "name": "play.js: Export class",
+            "description": null
+        },
+        {
+            "id": "play-js-using-getter",
+            "name": "play.js: using getter",
+            "description": null
+        },
+        {
+            "id": "play-js-settimeout",
+            "name": "play.js: setTimeout",
+            "description": null
+        },
+        {
+            "id": "play-js-arrow-function",
+            "name": "play.js: arrow function",
+            "description": null
+        }
+    ],
+    "sha": "062633346f41ae2594ad7ad19d56161989f109a2"
+}
