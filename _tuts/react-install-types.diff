@@ -1,0 +1,27 @@
+diff --git a/package.json b/package.json
+index 2a683f38..338eba04 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,7 @@
+ {
+   "devDependencies": {
+     "@symfony/webpack-encore": "^0.17.0",
++    "@types/react": "^16.0.22",
+     "babel-preset-react": "^6.24.1",
+     "bootstrap": "^3.3.7",
+     "copy-webpack-plugin": "^4.2.0",
+diff --git a/yarn.lock b/yarn.lock
+index a06c1d33..21d2bc17 100644
+--- a/yarn.lock
++++ b/yarn.lock
+@@ -32,6 +32,10 @@
+   version "8.0.51"
+   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.51.tgz#b31d716fb8d58eeb95c068a039b9b6292817d5fb"
+ 
++"@types/react@^16.0.22":
++  version "16.0.22"
++  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.22.tgz#19ad106e124aceebd2b4d430a278d55413ee8759"
++
+ "@types/source-map@*":
+   version "0.5.2"
+   resolved "https://registry.yarnpkg.com/@types/source-map/-/source-map-0.5.2.tgz#973459e744cc7445c85b97f770275b479b138e08"

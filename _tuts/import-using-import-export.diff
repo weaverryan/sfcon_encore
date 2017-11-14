@@ -1,0 +1,66 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index d0775f87..75035a39 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -210,4 +210,4 @@ class RepLogApp {
+ </tr>
+ `;
+ 
+-module.exports = RepLogApp;
++export default RepLogApp;
+diff --git a/assets/js/Components/RepLogAppHelper.js b/assets/js/Components/RepLogAppHelper.js
+index 29d75689..8682e3e5 100644
+--- a/assets/js/Components/RepLogAppHelper.js
++++ b/assets/js/Components/RepLogAppHelper.js
+@@ -1,4 +1,4 @@
+-module.exports = class Helper {
++export default class Helper {
+     constructor(repLogs) {
+         this.repLogs = repLogs;
+     }
+diff --git a/assets/js/layout.js b/assets/js/layout.js
+index 6d9f17ba..07f4cfe5 100644
+--- a/assets/js/layout.js
++++ b/assets/js/layout.js
+@@ -1,10 +1,10 @@
+ 'use strict';
+ 
+-const $ = require('jquery');
+-require('bootstrap');
+-require('bootstrap/dist/css/bootstrap.css');
+-require('font-awesome/css/font-awesome.css');
+-require('../css/layout.scss');
++import $ from 'jquery';
++import 'bootstrap';
++import 'bootstrap/dist/css/bootstrap.css';
++import 'font-awesome/css/font-awesome.css';
++import '../css/layout.scss';
+ 
+ $(document).ready(function() {
+     $('[data-toggle="tooltip"]').tooltip();
+diff --git a/assets/js/login.js b/assets/js/login.js
+index 479c6e39..afb516d4 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+-const $ = require('jquery');
+-require('../css/login.css');
++import $ from 'jquery';
++import '../css/login.css';
+ 
+ $(document).ready(function() {
+     $('.js-recommended-login').on('click', '.js-show-login', function(e) {
+diff --git a/assets/js/rep_log.js b/assets/js/rep_log.js
+index ca79a286..904c6841 100644
+--- a/assets/js/rep_log.js
++++ b/assets/js/rep_log.js
+@@ -1,5 +1,5 @@
+-const $ = require('jquery');
+-const RepLogApp = require('./Components/RepLogApp');
++import $ from 'jquery';
++import RepLogApp from './Components/RepLogApp';
+ 
+ $(document).ready(function() {
+     var $wrapper = $('.js-rep-log-table');

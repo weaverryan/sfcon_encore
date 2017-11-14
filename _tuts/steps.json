@@ -164,7 +164,77 @@
             "id": "sass-install-sass-deps",
             "name": "Sass: Install sass deps",
             "description": null
+        },
+        {
+            "id": "versioning-enable-versioning",
+            "name": "Versioning: Enable versioning",
+            "description": null
+        },
+        {
+            "id": "import-using-import-export",
+            "name": "Import: Using import\/export",
+            "description": null
+        },
+        {
+            "id": "react-create-basic-component",
+            "name": "React: Create basic component",
+            "description": null
+        },
+        {
+            "id": "react-enable-install",
+            "name": "React: Enable & install",
+            "description": null
+        },
+        {
+            "id": "react-render-element",
+            "name": "React: Render element",
+            "description": null
+        },
+        {
+            "id": "react-simple-render",
+            "name": "React: Simple {render}",
+            "description": null
+        },
+        {
+            "id": "react-start-to-refactor-html-to-react",
+            "name": "React: Start to refactor HTML to React",
+            "description": null
+        },
+        {
+            "id": "react-fix-html-classes-etc",
+            "name": "React: Fix HTML classes, etc",
+            "description": null
+        },
+        {
+            "id": "react-install-types",
+            "name": "React: Install types",
+            "description": null
+        },
+        {
+            "id": "react-adding-initial-state",
+            "name": "React: Adding initial state",
+            "description": null
+        },
+        {
+            "id": "react-adding-event-listener",
+            "name": "React: Adding event listener",
+            "description": null
+        },
+        {
+            "id": "react-bind-callback",
+            "name": "React: bind callback",
+            "description": null
+        },
+        {
+            "id": "react-passing-in-props",
+            "name": "React: Passing in props",
+            "description": null
+        },
+        {
+            "id": "react-pass-data-via-data",
+            "name": "React: Pass data via data-",
+            "description": null
         }
     ],
-    "sha": "f57778bf84f2091d423b7cc9707145fb640e0c04"
+    "sha": "c9da2741f0ed459486aea46bfc69058910f1081a"
 }
