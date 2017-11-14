@@ -44,7 +44,77 @@
             "id": "play-js-arrow-function",
             "name": "play.js: arrow function",
             "description": null
+        },
+        {
+            "id": "webpack-refactor-helper-to-module",
+            "name": "Webpack: Refactor Helper to module",
+            "description": null
+        },
+        {
+            "id": "webpack-install-encore",
+            "name": "Webpack: Install Encore",
+            "description": null
+        },
+        {
+            "id": "webpack-bootstrap-webpack-config-js",
+            "name": "Webpack: Bootstrap webpack.config.js",
+            "description": null
+        },
+        {
+            "id": "webpack-customize-webpack-config-js",
+            "name": "Webpack: Customize webpack.config.js",
+            "description": null
+        },
+        {
+            "id": "modules-refactor-replogapp-js",
+            "name": "Modules: Refactor RepLogApp.js",
+            "description": null
+        },
+        {
+            "id": "modules-add-proper-rep-log-js-entry",
+            "name": "Modules: Add proper rep_log.js entry",
+            "description": null
+        },
+        {
+            "id": "modules-organize-into-components",
+            "name": "Modules: Organize into Components",
+            "description": null
+        },
+        {
+            "id": "modules-require-install-jquery",
+            "name": "Modules: require + install jquery",
+            "description": null
+        },
+        {
+            "id": "multipage-add-login-js-entry",
+            "name": "Multipage: Add login.js entry",
+            "description": null
+        },
+        {
+            "id": "multipage-add-layout-js-entry",
+            "name": "Multipage: Add layout.js entry",
+            "description": null
+        },
+        {
+            "id": "bootstrap-require-bootstrap",
+            "name": "Bootstrap: require bootstrap",
+            "description": null
+        },
+        {
+            "id": "bootstrap-remove-jquery-bootstrap-from-base-html-twig",
+            "name": "Bootstrap: Remove jquery+bootstrap from base.html.twig",
+            "description": null
+        },
+        {
+            "id": "bootstrap-make-jquery-global",
+            "name": "Bootstrap: Make jQuery global",
+            "description": null
+        },
+        {
+            "id": "bootstrap-autoprovidejquery",
+            "name": "Bootstrap: autoProvidejQuery",
+            "description": null
         }
     ],
-    "sha": "062633346f41ae2594ad7ad19d56161989f109a2"
+    "sha": "4da776908e7dbf2c158f1a3a938ffd150483fc40"
 }

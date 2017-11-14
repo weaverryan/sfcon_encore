@@ -1,0 +1,42 @@
+diff --git a/app/Resources/views/base.html.twig b/app/Resources/views/base.html.twig
+index 7d6993ad..6c6daac2 100644
+--- a/app/Resources/views/base.html.twig
++++ b/app/Resources/views/base.html.twig
+@@ -102,7 +102,7 @@
+     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+-    <script src="{{ asset('assets/js/layout.js') }}"></script>
++    <script src="{{ asset('build/layout.js') }}"></script>
+ {% endblock %}
+ 
+ </body>
+diff --git a/web/assets/js/layout.js b/web/assets/js/layout.js
+index 881633d7..d7b54422 100644
+--- a/web/assets/js/layout.js
++++ b/web/assets/js/layout.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+-(function(window, $) {
+-    $(document).ready(function() {
+-        $('[data-toggle="tooltip"]').tooltip();
+-    });
+-})(window, jQuery);
++const $ = require('jquery');
++
++$(document).ready(function() {
++    $('[data-toggle="tooltip"]').tooltip();
++});
+diff --git a/webpack.config.js b/webpack.config.js
+index f7aea6f4..48865772 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -14,6 +14,7 @@ Encore
+     // will output as web/build/app.js
+     .addEntry('rep_log', './web/assets/js/rep_log.js')
+     .addEntry('login', './web/assets/js/login.js')
++    .addEntry('layout', './web/assets/js/layout.js')
+ 
+     // allow sass/scss files to be processed
+     //.enableSassLoader()

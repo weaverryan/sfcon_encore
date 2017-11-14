@@ -1,0 +1,18 @@
+diff --git a/web/assets/js/RepLogApp.js b/web/assets/js/Components/RepLogApp.js
+similarity index 100%
+rename from web/assets/js/RepLogApp.js
+rename to web/assets/js/Components/RepLogApp.js
+diff --git a/web/assets/js/RepLogAppHelper.js b/web/assets/js/Components/RepLogAppHelper.js
+similarity index 100%
+rename from web/assets/js/RepLogAppHelper.js
+rename to web/assets/js/Components/RepLogAppHelper.js
+diff --git a/web/assets/js/rep_log.js b/web/assets/js/rep_log.js
+index a42e5e7f..37d3265c 100644
+--- a/web/assets/js/rep_log.js
++++ b/web/assets/js/rep_log.js
+@@ -1,4 +1,4 @@
+-const RepLogApp = require('./RepLogApp');
++const RepLogApp = require('./Components/RepLogApp');
+ 
+ $(document).ready(function() {
+     var $wrapper = $('.js-rep-log-table');

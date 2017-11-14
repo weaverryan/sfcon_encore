@@ -1,0 +1,25 @@
+diff --git a/web/assets/js/layout.js b/web/assets/js/layout.js
+index 3628a4e3..e9d87b70 100644
+--- a/web/assets/js/layout.js
++++ b/web/assets/js/layout.js
+@@ -1,7 +1,6 @@
+ 'use strict';
+ 
+ const $ = require('jquery');
+-window.jQuery = $;
+ require('bootstrap');
+ 
+ $(document).ready(function() {
+diff --git a/webpack.config.js b/webpack.config.js
+index 48865772..243fff56 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -20,7 +20,7 @@ Encore
+     //.enableSassLoader()
+ 
+     // allow legacy applications to use $/jQuery as a global variable
+-    //.autoProvidejQuery()
++    .autoProvidejQuery()
+ 
+     .enableSourceMaps(!Encore.isProduction())
+ 
