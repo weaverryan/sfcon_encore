@@ -14,6 +14,7 @@ Encore
 
     // will output as web/build/app.js
     .addEntry('rep_log', './web/assets/js/rep_log.js')
+    .addEntry('login', './web/assets/js/login.js')
 
     // allow sass/scss files to be processed
     //.enableSassLoader()
