@@ -1,3 +1,11 @@
-module.exports = {
-    conference: 'SymfonyCon 2017'
+
+
+module.exports = class {
+    constructor(name) {
+        this.name = name;
+    }
+
+    getName() {
+        return this.name;
+    }
 };
