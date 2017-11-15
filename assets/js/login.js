@@ -7,8 +7,11 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 $(document).ready(function() {
+    const username = 'cindy_clawford';
+    const password = 'pumpup';
+
     ReactDOM.render(
-        <LoginDetails />,
+        <LoginDetails username={username} password={password} />,
         document.getElementById('js-login-details')
     );
 

@@ -30,11 +30,11 @@ export default class LoginDetails extends React.Component {
                         <tbody>
                             <tr>
                                 <th>Username</th>
-                                <td>cindy_clawford</td>
+                                <td>{this.props.username}</td>
                             </tr>
                             <tr>
                                 <th>Password</th>
-                                <td>pumpup</td>
+                                <td>{this.props.password}</td>
                             </tr>
                         </tbody>
                     </table>
