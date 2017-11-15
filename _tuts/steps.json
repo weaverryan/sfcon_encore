@@ -46,6 +46,31 @@
             "description": null
         },
         {
+            "id": "promise-eventuallyprint",
+            "name": "Promise: eventuallyPrint()",
+            "description": null
+        },
+        {
+            "id": "promise-return-a-promise",
+            "name": "Promise: Return a promise",
+            "description": null
+        },
+        {
+            "id": "promise-chain-promise",
+            "name": "Promise: Chain promise",
+            "description": null
+        },
+        {
+            "id": "promise-return-new-value",
+            "name": "Promise: Return new value",
+            "description": null
+        },
+        {
+            "id": "promise-return-a-promise-from-promise",
+            "name": "Promise: Return a Promise from Promise",
+            "description": null
+        },
+        {
             "id": "webpack-refactor-helper-to-module",
             "name": "Webpack: Refactor Helper to module",
             "description": null
@@ -131,8 +156,8 @@
             "description": null
         },
         {
-            "id": "css-require-main-css-with-img",
-            "name": "CSS: require main.css with img",
+            "id": "css-require-layout-css-with-img",
+            "name": "CSS: require layout.css with img",
             "description": null
         },
         {
@@ -281,5 +306,5 @@
             "description": null
         }
     ],
-    "sha": "4b88631df02cd04692c43738d8e295de7f076381"
+    "sha": "fc32eaf79287f775a488a9041b87e875038857c9"
 }

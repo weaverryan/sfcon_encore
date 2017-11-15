@@ -28,15 +28,18 @@ index 8b776b08..ec19d84f 100644
  
                  <br/>
 diff --git a/assets/js/Components/LoginDetails.jsx b/assets/js/Components/LoginDetails.jsx
-index d15391cc..a9f1735f 100644
+index 9fcf0ea9..a9f1735f 100644
 --- a/assets/js/Components/LoginDetails.jsx
 +++ b/assets/js/Components/LoginDetails.jsx
-@@ -3,8 +3,23 @@ import React from 'react';
+@@ -2,11 +2,24 @@ import React from 'react';
+ 
  export default class LoginDetails extends React.Component {
      render() {
+-        const name = 'Ryan';
+-        
          return (
 -            <div>
--                I am the login details!
+-                I am the login details! {name}
 +            <div class="js-recommended-login">
 +                <a href="#" class="js-show-login">Don't know the login?</a>
 +                <div class="js-recommended-login-details" style="display: none;">

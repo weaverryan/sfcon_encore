@@ -1,0 +1,12 @@
+diff --git a/play.js b/play.js
+index 6379b674..a9be44b9 100644
+--- a/play.js
++++ b/play.js
+@@ -15,4 +15,7 @@ eventuallyPrint(sfCon.name)
+     .then((data) => {
+         console.log('callback!');
+         console.log(data);
++    })
++    .then((data) => {
++        console.log(data);
+     });
