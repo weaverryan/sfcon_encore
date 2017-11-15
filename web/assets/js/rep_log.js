@@ -1,3 +1,4 @@
+const $ = require('jquery');
 const RepLogApp = require('./Components/RepLogApp');
 
 $(document).ready(function() {
