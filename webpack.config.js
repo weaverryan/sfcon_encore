@@ -31,6 +31,10 @@ Encore
 
     .enableReactPreset()
 
+    .configureBabel(config => {
+        config.plugins.push('syntax-dynamic-import');
+    })
+
     .addPlugin(new CopyWebpackPlugin([
         // copies to {output}/static
         { from: './assets/static', to: 'static'}
