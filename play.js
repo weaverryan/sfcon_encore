@@ -3,9 +3,16 @@ const Conference = require('./conference');
 const sfCon = new Conference('SymfonyCon 2017');
 
 function eventuallyPrint(message) {
-    setTimeout(() => {
-        console.log(message);
-    }, 500);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(message);
+            resolve('it is done!');
+        }, 500);
+    });
 }
 
-eventuallyPrint(sfCon.name);
+eventuallyPrint(sfCon.name)
+    .then((data) => {
+        console.log('callback!');
+        console.log(data);
+    });
