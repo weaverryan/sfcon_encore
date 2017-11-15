@@ -5,6 +5,7 @@ import '../css/login.css';
 import LoginDetails from './Components/LoginDetails';
 import ReactDOM from 'react-dom';
 import React from 'react';
+import showLongUsernameError from './Components/show_long_username_error';
 
 $(document).ready(function() {
     const loginDetailsEl = document.getElementById('js-login-details');
@@ -21,8 +22,7 @@ $(document).ready(function() {
         $('.login-long-username-warning').remove();
 
         if ($usernameInput.val().length >= 20) {
-            const $warning = $('<div class="login-long-username-warning">This is a really long username - are you sure that is right?</div>');
-            $usernameInput.before($warning);
+            showLongUsernameError($usernameInput);
         }
     });
 });
