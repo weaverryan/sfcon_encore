@@ -5,6 +5,7 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^3.3.7",
     "copy-webpack-plugin": "^4.2.0",
+    "core-js": "^2.5.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "node-sass": "^4.6.1",
