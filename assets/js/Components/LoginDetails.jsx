@@ -8,6 +8,8 @@ export default class LoginDetails extends React.Component {
         this.state = {
             isVisible: false
         }
+
+        this.onToggleClick = this.onToggleClick.bind(this);
     }
 
     onToggleClick(e) {
