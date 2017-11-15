@@ -15,6 +15,8 @@ eventuallyPrint(sfCon.name)
     .then((data) => {
         console.log('callback!');
         console.log(data);
+
+        return Math.random();
     })
     .then((data) => {
         console.log(data);
