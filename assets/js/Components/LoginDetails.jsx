@@ -3,11 +3,11 @@ import React from 'react';
 export default class LoginDetails extends React.Component {
     render() {
         return (
-            <div class="js-recommended-login">
-                <a href="#" class="js-show-login">Don't know the login?</a>
-                <div class="js-recommended-login-details" style="display: none;">
+            <div>
+                <a href="#" >Don't know the login?</a>
+                <div style={{display: 'none'}}>
                     Sir or madam, might I recommend that you try the following login details:
-                    <table class="table">
+                    <table className="table">
                         <tbody>
                             <tr>
                                 <th>Username</th>
