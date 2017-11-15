@@ -7,12 +7,12 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 $(document).ready(function() {
-    const username = 'cindy_clawford';
-    const password = 'pumpup';
-
+    const loginDetailsEl = document.getElementById('js-login-details');
+    const username = loginDetailsEl.dataset.username;
+    const password = loginDetailsEl.dataset.password;
     ReactDOM.render(
         <LoginDetails username={username} password={password} />,
-        document.getElementById('js-login-details')
+        loginDetailsEl
     );
 
     $('.js-login-field-username').on('keydown', function(e) {
