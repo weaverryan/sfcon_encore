@@ -1,3 +1,3 @@
-const conference = require('./conference');
+const data = require('./conference');
 
-console.log(conference);
+console.log(data.conference);

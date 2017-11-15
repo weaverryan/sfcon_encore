@@ -1,1 +1,3 @@
-module.exports = 'SymfonyCon 2017';
+module.exports = {
+    conference: 'SymfonyCon 2017'
+};
