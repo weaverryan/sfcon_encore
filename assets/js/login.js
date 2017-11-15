@@ -3,8 +3,15 @@
 import $ from 'jquery';
 import '../css/login.css';
 import LoginDetails from './Components/LoginDetails';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
 $(document).ready(function() {
+    ReactDOM.render(
+        <LoginDetails />,
+        document.getElementById('js-login-details')
+    );
+
     $('.js-recommended-login').on('click', '.js-show-login', function(e) {
         e.preventDefault();
 
