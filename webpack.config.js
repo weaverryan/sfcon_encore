@@ -21,7 +21,7 @@ Encore
     //.enableSassLoader()
 
     // allow legacy applications to use $/jQuery as a global variable
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     .enableSourceMaps(!Encore.isProduction())
 
