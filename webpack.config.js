@@ -39,8 +39,8 @@ Encore
 
 const config = Encore.getWebpackConfig();
 
-config.externals = {
-    routing: 'Routing'
-};
+// config.externals = {
+//     routing: 'Routing'
+// };
 
 module.exports = config;
