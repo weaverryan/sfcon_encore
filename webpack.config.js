@@ -10,6 +10,7 @@ Encore
 
     // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
+    .enableBuildNotifications()
 
     // will output as web/build/app.js
     .addEntry('rep_log', './web/assets/js/RepLogApp.js')
