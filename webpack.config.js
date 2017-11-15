@@ -27,7 +27,7 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
 
     // create hashed filenames (e.g. app.abc123.css)
-    // .enableVersioning()
+    .enableVersioning()
 
     .addPlugin(new CopyWebpackPlugin([
         // copies to {output}/static
