@@ -211,4 +211,4 @@ class RepLogApp {
 </tr>
 `;
 
-module.exports = RepLogApp;
+export default RepLogApp;
