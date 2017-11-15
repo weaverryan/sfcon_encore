@@ -2,6 +2,7 @@
 
 const Helper = require('./RepLogAppHelper');
 const $ = require('jquery');
+const Routing = require('routing');
 
 let HelperInstances = new WeakMap();
 

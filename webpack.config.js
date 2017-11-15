@@ -37,5 +37,10 @@ Encore
     ]))
 ;
 
-// export the final configuration
-module.exports = Encore.getWebpackConfig();
+const config = Encore.getWebpackConfig();
+
+config.externals = {
+    routing: 'Routing'
+};
+
+module.exports = config;
