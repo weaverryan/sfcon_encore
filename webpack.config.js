@@ -13,7 +13,7 @@ Encore
     .enableBuildNotifications()
 
     // will output as web/build/app.js
-    .addEntry('rep_log', './web/assets/js/RepLogApp.js')
+    .addEntry('rep_log', './web/assets/js/rep_log.js')
 
     // allow sass/scss files to be processed
     //.enableSassLoader()
