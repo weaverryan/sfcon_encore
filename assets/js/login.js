@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import '../css/login.css';
+import LoginDetails from './Components/LoginDetails';
 
 $(document).ready(function() {
     $('.js-recommended-login').on('click', '.js-show-login', function(e) {
