@@ -15,4 +15,7 @@ eventuallyPrint(sfCon.name)
     .then((data) => {
         console.log('callback!');
         console.log(data);
+    })
+    .then((data) => {
+        console.log(data);
     });
