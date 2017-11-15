@@ -10,10 +10,18 @@ export default class LoginDetails extends React.Component {
         }
     }
 
+    onToggleClick(e) {
+        e.preventDefault();
+
+        this.setState({
+            isVisible: !this.state.isVisible
+        });
+    }
+
     render() {
         return (
             <div>
-                <a href="#" >Don't know the login?</a>
+                <a href="#" onClick={this.onToggleClick}>Don't know the login?</a>
                 <div className={this.state.isVisible ? '' : 'hidden'}>
                     Sir or madam, might I recommend that you try the following login details:
                     <table className="table">
