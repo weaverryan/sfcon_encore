@@ -16,7 +16,11 @@ eventuallyPrint(sfCon.name)
         console.log('callback!');
         console.log(data);
 
-        return Math.random();
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(Math.random());
+            }, 2000)
+        });
     })
     .then((data) => {
         console.log(data);
