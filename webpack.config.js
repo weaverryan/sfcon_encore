@@ -29,6 +29,8 @@ Encore
     // create hashed filenames (e.g. app.abc123.css)
     .enableVersioning()
 
+    .enableReactPreset()
+
     .addPlugin(new CopyWebpackPlugin([
         // copies to {output}/static
         { from: './assets/static', to: 'static'}
