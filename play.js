@@ -2,6 +2,10 @@ const Conference = require('./conference');
 
 const sfCon = new Conference('SymfonyCon 2017');
 
-setTimeout(() => {
-    console.log(sfCon.name);
-}, 500);
+function eventuallyPrint(message) {
+    setTimeout(() => {
+        console.log(message);
+    }, 500);
+}
+
+eventuallyPrint(sfCon.name);
