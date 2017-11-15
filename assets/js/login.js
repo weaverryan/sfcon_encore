@@ -22,7 +22,7 @@ $(document).ready(function() {
 
         if ($usernameInput.val().length >= 20) {
             require.ensure(['./Components/show_long_username_error'], (require) => {
-                const showLongUsernameError = require('./Components/show_long_username_error');
+                const showLongUsernameError = require('./Components/show_long_username_error').default;
                 showLongUsernameError($usernameInput);
             });
         }
